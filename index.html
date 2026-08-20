@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AXIOM AI | Precision Self-Knowledge & Enneagram Topology</title>
+    <title>AXIOM AI | True Self Agentic Coaching Workspace</title>
     <style>
         :root {
             --bg-color: #050b14;
             --card-bg: #0a1628;
             --accent-blue: #3b82f6;
-            --accent-glow: rgba(59, 130, 246, 0.4);
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --border-color: #1e3a8a;
@@ -22,24 +21,28 @@
         nav a { color: var(--text-muted); text-decoration: none; margin-left: 2rem; font-size: 0.9rem; transition: color 0.2s; }
         nav a:hover, nav a.active { color: var(--accent-blue); }
         
-        .hero { padding: 10rem 5% 5rem; text-align: center; max-width: 900px; margin: 0 auto; }
-        .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
-        .hero h1 span { background: linear-gradient(135deg, #60a5fa, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero p { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2.5rem; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 9rem 5% 5rem; }
+        h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; }
+        .subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 3rem; }
         
-        .phases { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; padding: 4rem 5%; max-width: 1200px; margin: 0 auto; }
-        .phase-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .phase-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #2563eb, #60a5fa); }
-        .phase-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-blue); font-weight: 700; margin-bottom: 0.75rem; }
-        .phase-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
-        .phase-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; }
+        .workspace-preview { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2.5rem; margin-bottom: 3rem; }
+        .workspace-preview h3 { font-size: 1.3rem; margin-bottom: 1rem; color: #60a5fa; }
+        .workspace-preview p { color: var(--text-muted); margin-bottom: 1.5rem; }
+
+        /* Embedded App Interface Graphic */
+        .app-mockup { background: #050b14; border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
         
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+        .feature-card { background: rgba(10, 22, 40, 0.5); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem; }
+        .feature-card h4 { margin-bottom: 0.75rem; color: var(--text-main); }
+        .feature-card p { color: var(--text-muted); font-size: 0.9rem; }
+        
+        .cta-box { text-align: center; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 3rem; }
         .price { font-size: 1.75rem; font-weight: 700; margin-bottom: 1.5rem; }
-        .btn-paypal { background: #0070ba; color: white; border: none; width: 100%; padding: 0.85rem 1.5rem; font-size: 1rem; font-weight: 600; border-radius: 6px; cursor: pointer; transition: background 0.2s, transform 0.1s; text-align: center; text-decoration: none; display: inline-block; }
-        .btn-paypal:hover { background: #005ea6; transform: translateY(-1px); }
+        .btn-paypal { background: #0070ba; color: white; border: none; padding: 0.85rem 2rem; font-size: 1rem; font-weight: 600; border-radius: 6px; cursor: pointer; transition: background 0.2s; text-decoration: none; display: inline-block; }
+        .btn-paypal:hover { background: #005ea6; }
         
-        footer { border-top: 1px solid var(--border-color); padding: 3rem 5%; text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 4rem; }
-        footer p { margin-bottom: 0.5rem; }
+        footer { border-top: 1px solid var(--border-color); padding: 2rem 5%; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -47,85 +50,83 @@
     <header>
         <div class="logo">AXIOM <span>AI</span></div>
         <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="workspace.html">Agentic Workspace</a>
+            <a href="index.html">Home</a>
+            <a href="workspace.html" class="active">Agentic Workspace</a>
             <a href="mission.html">Founding Mission</a>
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>Precision Self-Knowledge<br><span>Built on Validated Science.</span></h1>
-        <p>Axiom AI gives you precise, research-backed insight into who you actually are through our agentic Enneagram Tritype® framework, developed over 35 years of clinical research by David W. Fauvre, M.A.</p>
-    </section>
+    <div class="container">
+        <h1>Continuous AI Companion Workspace</h1>
+        <p class="subtitle">Phase 2: A precision coaching environment tuned specifically to your type—not a generic chatbot.</p>
 
-    <section id="phases" class="phases">
-        <!-- Phase 1 -->
-        <div class="phase-card">
-            <div>
-                <div class="phase-tag">Phase One Launch</div>
-                <h3>Signature Architecture Report</h3>
-                <p>Rapid intake and AI-assisted analysis delivering your complete Enneagram Tritype® topology map, confidence sync indices, and personalized blueprint at 50% off for founding cohort members.</p>
+        <div class="workspace-preview">
+            <h3>The Difference Between a Stranger and a Lifetime Mentor</h3>
+            <p>Most modern AI tools offer a one-size-fits-all conversational experience. Axiom AI’s Daily Execution Hub acts as a precision coaching environment tuned directly to your Tritype® architecture, responding to questions about work, relationships, and decisions through the exact lens of your true self.</p>
+            
+            <!-- Embedded App Interface Graphic -->
+            <div class="app-mockup">
+                <svg viewBox="0 0 700 280" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="700" height="280" rx="6" fill="#080f1e" stroke="#1e3a8a" stroke-width="1"/>
+                    <!-- Window Controls -->
+                    <circle cx="25" cy="20" r="5" fill="#ef4444"/>
+                    <circle cx="40" cy="20" r="5" fill="#f59e0b"/>
+                    <circle cx="55" cy="20" r="5" fill="#10b981"/>
+                    <text x="350" y="23" fill="#94a3b8" font-size="11" text-anchor="middle">AXIOM AI — AGENTIC WORKSPACE (TRITYPE 3-6-8)</text>
+                    <line x1="0" y1="35" x2="700" y2="35" stroke="#1e3a8a" stroke-width="1"/>
+                    
+                    <!-- Sidebar UI -->
+                    <rect x="20" y="55" width="160" height="205" rx="4" fill="#0a1628" stroke="#1e3a8a" stroke-width="1"/>
+                    <text x="35" y="80" fill="#60a5fa" font-size="10" font-weight="bold">ACTIVE SESSIONS</text>
+                    <text x="35" y="105" fill="#f8fafc" font-size="10">Executive Strategy</text>
+                    <text x="35" y="130" fill="#94a3b8" font-size="10">Core Defense Calibration</text>
+                    <text x="35" y="155" fill="#94a3b8" font-size="10">Decision Engine v2</text>
+
+                    <!-- Main Chat Panel -->
+                    <rect x="200" y="55" width="480" height="205" rx="4" fill="#0a1628" stroke="#1e3a8a" stroke-width="1"/>
+                    <rect x="220" y="75" width="300" height="40" rx="6" fill="#1e3a8a" fill-opacity="0.4"/>
+                    <text x="235" y="100" fill="#f8fafc" font-size="11">System initialized. Calibrated to Core Type 3.</text>
+                    
+                    <rect x="300" y="130" width="360" height="50" rx="6" fill="#2563eb" fill-opacity="0.3"/>
+                    <text x="315" y="150" fill="#60a5fa" font-size="11" font-weight="bold">Axiom Assistant:</text>
+                    <text x="315" y="166" fill="#f8fafc" font-size="10">Recognizing underlying performance fixations. Adjusting strategy...</text>
+                </svg>
             </div>
-            <div>
-                <div class="price">$78</div>
-                <!-- PayPal Form for $78 -->
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_xclick">
-                    <input type="hidden" name="business" value="davidwilliamfauvre@gmail.com">
-                    <input type="hidden" name="item_name" value="Axiom AI - Signature Architecture Report (Preorder)">
-                    <input type="hidden" name="amount" value="78.00">
-                    <input type="hidden" name="currency_code" value="USD">
-                    <button type="submit" class="btn-paypal">Preorder via PayPal</button>
-                </form>
+
+            <p>Built on over three decades of empirical research into linguistic patterns and core motivations, the workspace provides real-time guidance designed to build self-reliance and clarity.</p>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4>System-Level Topology Map</h4>
+                <p>Visualizes your Enneagram core node, confidence sync indices, and biometric stability tracking in real time.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Type-Specific Guidance</h4>
+                <p>Responses are dynamically calibrated to your specific defense mechanisms, eliminating generic wellness fluff.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Daily Execution Hub</h4>
+                <p>Manage professional challenges, creative projects, and personal decisions with an intelligence that understands your core wiring.</p>
             </div>
         </div>
 
-        <!-- Phase 2 -->
-        <div class="phase-card">
-            <div>
-                <div class="phase-tag">Phase Two Professional</div>
-                <h3>True Self Agentic Coaching</h3>
-                <p>Advanced continuous daily execution hub and professional-grade AI companion workspace tuned specifically to your individual personality typology for deep integration.</p>
-            </div>
-            <div>
-                <div class="price">$150</div>
-                <!-- PayPal Form for $150 -->
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_xclick">
-                    <input type="hidden" name="business" value="davidwilliamfauvre@gmail.com">
-                    <input type="hidden" name="item_name" value="Axiom AI - True Self Agentic Coaching Access">
-                    <input type="hidden" name="amount" value="150.00">
-                    <input type="hidden" name="currency_code" value="USD">
-                    <button type="submit" class="btn-paypal">Secure Access via PayPal</button>
-                </form>
-            </div>
+        <div class="cta-box">
+            <h3>Secure Phase 2 Coaching Access</h3>
+            <div class="price">$150</div>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="davidwilliamfauvre@gmail.com">
+                <input type="hidden" name="item_name" value="Axiom AI - True Self Agentic Coaching Access">
+                <input type="hidden" name="amount" value="150.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <button type="submit" class="btn-paypal">Secure Access via PayPal</button>
+            </form>
         </div>
-
-        <!-- Phase 3 -->
-        <div class="phase-card">
-            <div>
-                <div class="phase-tag">Phase Three Enterprise</div>
-                <h3>Enterprise & Extended License</h3>
-                <p>Extended platform access for professional psychologists, executive coaches, and enterprise team integration, leveraging decades of proprietary linguistic and behavioral data sets.</p>
-            </div>
-            <div>
-                <div class="price">$300</div>
-                <!-- PayPal Form for $300 -->
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_xclick">
-                    <input type="hidden" name="business" value="davidwilliamfauvre@gmail.com">
-                    <input type="hidden" name="item_name" value="Axiom AI - Enterprise & Extended License">
-                    <input type="hidden" name="amount" value="300.00">
-                    <input type="hidden" name="currency_code" value="USD">
-                    <button type="submit" class="btn-paypal">Join Enterprise Tier</button>
-                </form>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <footer>
         <p>&copy; 2026 David W. Fauvre, M.A. / Enneagram Explorations. All rights reserved.</p>
-        <p>Contact: davidwilliamfauvre@gmail.com | 669-221-0548</p>
     </footer>
 
 </body>
